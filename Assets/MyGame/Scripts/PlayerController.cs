@@ -3,15 +3,15 @@
 public class PlayerController : MonoBehaviour
 {
 
-    private Rigidbody2D rb;
-    private Animator anim, anim2, anim3, anim4, anim5;
+    private Rigidbody2D rigidBody;
+    private Animator anim;
     [SerializeField] private float jumpForce;
     private bool grounded;
     private bool gameOver = false;
 
     private void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
+        rigidBody = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
 
@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
     private void jump()
     {
         grounded = false;
-        rb.velocity = Vector2.up * jumpForce;
+        rigidBody.velocity = Vector2.up * jumpForce;
         anim.SetTrigger("Jump");
         GameManager.instance.IncrementScore();
         Debug.Log("DeleteMe");
