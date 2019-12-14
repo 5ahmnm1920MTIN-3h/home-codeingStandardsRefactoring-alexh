@@ -3,12 +3,12 @@
 public class Obstacle : MonoBehaviour
 {
 
-    Rigidbody2D rb;
-    [SerializeField] private float MoveSpeed;
+    private Rigidbody2D rigidBody;
+    [SerializeField] private float moveSpeed;
 
     private void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
+        rigidBody = GetComponent<Rigidbody2D>();
     }
 
     // Start is called before the first frame update
@@ -35,6 +35,6 @@ public class Obstacle : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.velocity = Vector2.left * MoveSpeed;
+        rigidBody.velocity = Vector2.left * moveSpeed;
     }
 }
