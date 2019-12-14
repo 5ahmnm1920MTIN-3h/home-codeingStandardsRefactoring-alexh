@@ -5,6 +5,8 @@ public class Obstacle : MonoBehaviour
 
     private Rigidbody2D rigidBody;
     [SerializeField] private float moveSpeed;
+    [SerializeField] private float leftBoundary = -15f;
+    [SerializeField] private float rightBoundary = 15f;
 
     private void Awake()
     {
@@ -13,12 +15,12 @@ public class Obstacle : MonoBehaviour
 
     void Update()
     {
-        if (transform.position.x > 15f)
+        if (transform.position.x > rightBoundary)
         {
             Destroy(gameObject);
         }
 
-        else if (transform.position.x < -15f)
+        else if (transform.position.x < leftBoundary)
         {
             Destroy(gameObject);
         }
