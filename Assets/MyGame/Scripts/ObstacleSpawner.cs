@@ -5,7 +5,7 @@ public class ObstacleSpawner : MonoBehaviour
 {
 
     public static ObstacleSpawner instance;
-    public GameObject[] obstacles;
+    [SerializeField] private GameObject[] obstacles;
     public bool gameOver = false;
     public float minSpawnTime, maxSpawnTime;
 
