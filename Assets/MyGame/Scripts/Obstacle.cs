@@ -13,12 +13,12 @@ public class Obstacle : MonoBehaviour
 
     void Update()
     {
-        if(transform.position.x < -15f)
+        if (transform.position.x > 15f)
         {
             Destroy(gameObject);
         }
 
-        if (transform.position.x > 15f)
+        else if (transform.position.x < -15f)
         {
             Destroy(gameObject);
         }
