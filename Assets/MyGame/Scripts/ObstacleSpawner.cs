@@ -20,7 +20,7 @@ public class ObstacleSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(instance.Spawn());
+        StartCoroutine(Spawn());
     }
 
     IEnumerator Spawn()
