@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MenuController : MonoBehaviour{
+public class MenuController : MonoBehaviour
+{
 
     [SerializeField] private string loadedScene = "MainScene";
 
