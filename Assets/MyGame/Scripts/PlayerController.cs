@@ -21,12 +21,12 @@ public class PlayerController : MonoBehaviour
         {
             if (grounded == true)
             {
-                jump();
+                Jump();
             }
         }
     }
 
-    private void jump()
+    private void Jump()
     {
         grounded = false;
         rigidBody.velocity = Vector2.up * jumpForce;
