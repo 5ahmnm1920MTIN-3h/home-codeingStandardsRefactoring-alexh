@@ -5,8 +5,8 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public GameObject gameOverPanel;
-    public Text scoreText;
+    [SerializeField] private GameObject gameOverPanel;
+    [SerializeField] private Text scoreText;
     string defaultText;
     int score = 0;
 
