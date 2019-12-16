@@ -2,7 +2,6 @@
 
 public class PlayerController : MonoBehaviour
 {
-
     private Rigidbody2D rigidBody;
     private Animator anim;
     [SerializeField] private float jumpForce;

@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class ObstacleSpawner : MonoBehaviour
 {
-
     public static ObstacleSpawner instance;
     [SerializeField] private GameObject[] obstacles;
     public bool gameOver = false;
@@ -27,6 +26,7 @@ public class ObstacleSpawner : MonoBehaviour
     {
         float waitTime = 1f;
         yield return new WaitForSeconds (waitTime);
+
         while (!gameOver)
         {
             SpawnObstacle();

@@ -2,7 +2,6 @@
 
 public class Obstacle : MonoBehaviour
 {
-
     private Rigidbody2D rigidBody;
     [SerializeField] private float moveSpeed;
     [SerializeField] private float leftBoundary = -15f;
