@@ -4,9 +4,12 @@ public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D rigidBody;
     private Animator anim;
+
     [SerializeField] private float jumpForce;
+
     private bool grounded;
     private bool gameOver = false;
+
     private string jumpTrigger = "Jump";
     private string groundTag = "Ground";
     private string obstacleTag = "Obstacle";
