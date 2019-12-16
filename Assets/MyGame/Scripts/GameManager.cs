@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject gameOverPanel;
     [SerializeField] private Text scoreText;
     private int score = 0;
+    private string menuScene = "MenuScene";
 
     private void Awake()
     {
@@ -37,12 +38,12 @@ public class GameManager : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene(MenuController.loadedScene);
     }
 
     public void Menu()
     {
-        SceneManager.LoadScene("MenuScene");
+        SceneManager.LoadScene(menuScene);
     }
 
     public void IncrementScore()
