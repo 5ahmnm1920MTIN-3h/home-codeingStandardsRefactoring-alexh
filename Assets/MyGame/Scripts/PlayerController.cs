@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if (Input.GetMouseButton(0) && !gameOver && !gameOver && !gameOver)
+        if (Input.GetMouseButton(0) && !gameOver)
         {
             if (grounded == true)
             {
