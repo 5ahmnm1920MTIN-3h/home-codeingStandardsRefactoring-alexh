@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     [SerializeField] private GameObject gameOverPanel;
     [SerializeField] private Text scoreText;
-    int score = 0;
+    private int score = 0;
 
     private void Awake()
     {
