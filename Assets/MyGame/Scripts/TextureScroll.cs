@@ -2,7 +2,7 @@
 
 public class TextureScroll : MonoBehaviour
 {
-    public float scrollSpeed;
+    [SerializeField] private float scrollSpeed;
     public bool scroll = true;
 
     Material backgroundMaterial;
