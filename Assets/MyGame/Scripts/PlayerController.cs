@@ -40,7 +40,6 @@ public class PlayerController : MonoBehaviour
         rigidBody.velocity = Vector2.up * jumpForce;
         anim.SetTrigger(jumpTrigger);
         GameManager.instance.IncrementScore();
-        Debug.Log("DeleteMe");
     }
 
     private bool SetGameOverTrue()
