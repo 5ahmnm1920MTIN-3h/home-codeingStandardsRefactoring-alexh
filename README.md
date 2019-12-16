@@ -15,15 +15,15 @@ Ein Nachteil ist der Arbeitsaufwand der mit dem Refactoring kommt, außerdem kö
 5. Falls ja, dann Änderung commiten
 
 ## Was sind die Prinzipien von „gutem“ Code?
-1. **DRY - Don’t Repeat Yourself**
+1. **DRY - Don’t Repeat Yourself**  
 Falls mein einen Block von Code mehrmals ausführt, ist es besser diesen in eine Methode zu verpacken, und dann nur auf diese Methode zu verweisen
-2. **KISS - Keep it Simple, Stupid**
+2. **KISS - Keep it Simple, Stupid**  
 Am besten ist es, wenn man den einfachsten Weg zum Ziel wählt, also unnötige Komplexität vermeiden. So ist es einfacher später sich im Code wieder einzufinden.
-3. **YAGNI - You Ain’t Gonna Need It**
+3. **YAGNI - You Ain’t Gonna Need It**  
 Variablen und Methoden die man nicht braucht, weglöschen, ansonsten wird der Code nur unübersichtlicher.
-4. **Principle of least Astonishment**
+4. **Principle of least Astonishment**  
 Benenne Variablen und Methoden so, dass es klar ist welche Aufgabe diese erfüllen
-5. **SoC - Separation of Concerns**
+5. **SoC - Separation of Concerns**  
 Codeblöcke sollten beispielweise mit einer leeren Zeile logisch getrennt werden. Bespiel: 
 3 String Variablen werden deklariert
 Leer
@@ -32,7 +32,7 @@ Leer
 ## Was versteht man unter Code Smell?
 Ein Quellcode der unter „Code Smell“ leidet funktioniert zwar, ist aber simpel ausgedrückt schlecht strukturiert und schlecht formatiert.
 
-## Recherche von 10 Code Smells die Eure Projekt betreffen können, inkl. Beschreibung und Beispiel.
+## Beschreibung von 10 Code Smells
 1. Unnötige Namespaces: Namespaces die im Code nicht benötigt werden können problemlos gelöscht werden. Beispiel: System.Collections wird bei den meisten C# Scripts für Unity nicht gebraucht, und kann somit gelöscht werden.
 2. Nichtgebrauchte Variablen: Variablen die deklariert werden aber niemals verwendet werden, sollte gelöscht werden.
 3. Unnötige Debug Logs: Konsolennachrichten die nicht mehr gebraucht werden, sollten gelöscht werden, da ansonsten die Konsole unnötig zugemüllt wird. Vorallem bei einem Debug.Log in einer Update Methode die bei jedem Frame ausgeführt werden, wird die Konsole extrem voll und andere einmalige Konsoleneinträge gehen in der Menge unter.
@@ -45,11 +45,11 @@ Ein Quellcode der unter „Code Smell“ leidet funktioniert zwar, ist aber simp
 10. Keine Kommentare: Kommentare sind vor allem dann hilfreich, wenn andere am Code mitarbeiten oder falls man später nach einiger Zeit nochmal daran weiterarbeiten will. Man sollte also bei komplexeren Codeblöcken anmerken, welche Funktion dieser erfüllt. Allerdings sollte man nicht übertreiben. Selbsterklärenden Code sollte man nicht kommentieren.
 
 ## Development Platform
-OS: Windows 10 Version: 1903 (Build 18362.476)
-Unity Version: 2019.1.14f1
-Visual Studio Community 2019 Version: 16.4.0
-Scripting Runtime Version: .NET 4.x Equivalent
-API Compatibility Level: .NET Standard 2.0
+OS: Windows 10 Version: 1903 (Build 18362.476)  
+Unity Version: 2019.1.14f1  
+Visual Studio Community 2019 Version: 16.4.0  
+Scripting Runtime Version: .NET 4.x Equivalent  
+API Compatibility Level: .NET Standard 2.0  
 
 ## Third Party Material
 "SantaRun" Game by [smeerws](https://github.com/smeerws)
