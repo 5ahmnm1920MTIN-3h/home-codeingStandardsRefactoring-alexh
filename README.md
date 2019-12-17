@@ -39,7 +39,7 @@ private float scrollSpeed;
 Ein Quellcode der unter „Code Smell“ leidet funktioniert zwar, ist aber simpel ausgedrückt schlecht strukturiert und schlecht formatiert.
 
 ## Beschreibung von 10 Code Smells
-### 1. Unnötige Namespaces**    
+### 1. Unnötige Namespaces   
 Namespaces die im Code nicht benötigt werden können problemlos gelöscht werden. Beispiel: System.Collections wird bei den meisten C# Scripts für Unity nicht gebraucht, und kann somit gelöscht werden.  
 ```c#
 using System;
@@ -47,7 +47,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 ```
-### 2. Ungebrauchte Variablen**   
+### 2. Ungebrauchte Variablen  
 Variablen die deklariert werden aber niemals verwendet werden, sollte gelöscht werden.  
 ```c#
 [SerializeField] private GameObject canvasObjectOut;
@@ -67,7 +67,7 @@ private void DebugTest()
 	Debug.Log(testDebugMessage);
 }
 ``` 
-### 4. Unnötige Methoden# 
+### 4. Unnötige Methoden
 Methoden die im gesamten Code nicht einmal ausgeführt werden, sollten gelöscht werden.  
 ```c#
 // Wird am Ende nicht mehr gebraucht, sollte also gelöscht werden
