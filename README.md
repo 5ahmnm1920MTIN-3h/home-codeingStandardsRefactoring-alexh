@@ -263,11 +263,11 @@ Unity Version: 2019.1.14f1
 Visual Studio Community 2019 Version: 16.4.0  
 Scripting Runtime Version: .NET 4.x Equivalent  
 API Compatibility Level: .NET Standard 2.0  
+  
+Copyright by alexh 
 
 ## Third Party Material
-"SantaRun" Game by [smeerws](https://github.com/smeerws)
-
-Copyright by alexh  
+["SantaRun"](https://https://github.com/5ahmnm1920MTIN-3h/home-toRefac-SantaRun-smeerws) Game by [smeerws](https://github.com/smeerws)
   
 # Santa Run
 
