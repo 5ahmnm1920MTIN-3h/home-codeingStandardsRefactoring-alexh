@@ -39,7 +39,7 @@ private float scrollSpeed;
 Ein Quellcode der unter „Code Smell“ leidet funktioniert zwar, ist aber simpel ausgedrückt schlecht strukturiert und schlecht formatiert.
 
 ## Beschreibung von 10 Code Smells
-###1. Unnötige Namespaces**    
+### 1. Unnötige Namespaces**    
 Namespaces die im Code nicht benötigt werden können problemlos gelöscht werden. Beispiel: System.Collections wird bei den meisten C# Scripts für Unity nicht gebraucht, und kann somit gelöscht werden.  
 ```c#
 using System;
@@ -47,7 +47,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 ```
-###2. Ungebrauchte Variablen**   
+### 2. Ungebrauchte Variablen**   
 Variablen die deklariert werden aber niemals verwendet werden, sollte gelöscht werden.  
 ```c#
 [SerializeField] private GameObject canvasObjectOut;
@@ -59,7 +59,7 @@ private float durationOut;
 // sollte am Ende gelöscht werden
 public string testDebugMessage = "Hello World";
 ``` 
-###3. Unnötige Debug Logs 
+### 3. Unnötige Debug Logs 
 Konsolennachrichten die nicht mehr gebraucht werden, sollten gelöscht werden, da ansonsten die Konsole unnötig zugemüllt wird. Vorallem bei einem Debug.Log in einer Update Methode die bei jedem Frame ausgeführt werden, wird die Konsole extrem voll und andere einmalige Konsoleneinträge gehen in der Menge unter.  
 ```c#
 private void DebugTest() 
@@ -67,7 +67,7 @@ private void DebugTest()
 	Debug.Log(testDebugMessage);
 }
 ``` 
-###4. Unnötige Methoden# 
+### 4. Unnötige Methoden# 
 Methoden die im gesamten Code nicht einmal ausgeführt werden, sollten gelöscht werden.  
 ```c#
 // Wird am Ende nicht mehr gebraucht, sollte also gelöscht werden
@@ -84,7 +84,7 @@ IEnumerator Example()
 	print(Time.time);
 }
 ``` 
-###5. Magical String
+### 5. Magical String
 Ein String Wert der mitten im Code verwendet wird sollte zuvor als eigene Variable deklariert werden. Im Code sollte diese Variable verwendet werden. Vor allem wenn dieser String öfters verwendet wird ist dies von Vorteil, da man so den Wert als Variable nur einmal ändern muss und nicht überall einzeln.  
 ```c#
 public void LoadScene()
@@ -101,7 +101,7 @@ public void LoadScene()
 	SceneManager.LoadScene(mainSceneName);
 }
 ```
-###6. Magical Number 
+### 6. Magical Number 
 Ein numerischer Wert (Bsp: int, float, …) der mitten im Code verwendet wird sollte zuvor als eigene Variable deklariert werden. Im Code sollte diese Variable verwendet werden. Vor allem wenn dieser Wert öfters verwendet wird ist dies von Vorteil, da man so den Wert als Variable nur einmal ändern muss und nicht überall einzeln.  
 ```c#
 public void playAnimationAufbauDelayed()
@@ -122,7 +122,7 @@ public void playAnimationAufbauDelayed()
 	StartCoroutine(enableButtonWait());
 }
 ```
-###7. Poor formating  
+### 7. Poor formating  
 Ein schlecht formatierter Code ist unangenehm zu lesen und nachzuvollziehen, vor allem für andere. Beispiele sind unnötige Leerzeichen oder zu wenig oder zu viele Tabulatorstopps.  
 ```c#
 IEnumerator Start()
@@ -151,7 +151,7 @@ private void CloneRaindrop()
     }
     }
 ```
-###8. Falsche Variablen Benennung   
+### 8. Falsche Variablen Benennung   
 Variablen müssen stets im camelCase benennt werden. Heißt ohne jegliche Leerzeichen, der erste Buchstabe klein und alle anderen eigentlich eigenständigen Wörter beginnen groß. Dies ist Teil von den Coding Standards.  
 ```c#
 [SerializeField] float MinSpawnDelay = 1.0f;
@@ -162,7 +162,7 @@ Sollte so gelöst werden:
 [SerializeField] float minSpawnDelay = 1.0f;
 [SerializeField] float maxSpawnDelay = 5.0f;
 ```
-###9. Falsche Methoden Benennung  
+### 9. Falsche Methoden Benennung  
 Methoden müssen stets im PascalCase benennt werden. Heißt ohne jegliche Leerzeichen, der erste Buchstabe groß und alle anderen eigentlich eigenständigen Wörter beginnen ebenfalls groß. Dies ist Teil von den Coding Standards.  
 ```c#
 private void move()
@@ -183,7 +183,7 @@ private void Move()
 		transform.position = new Vector2(newPosX, transform.position.y);
 }
 ```
-###10. Unperformante IF-Statements 
+### 10. Unperformante IF-Statements 
 Falls man mehrere zusammenhängende IF Fälle auflistet sollten diese mit if, if else und else zusammengekettet werden. So bricht der Computer beim Durchgehen der verschiedenen Fälle vorzeitig ab, sobald er den zutreffenden Fall gefunden hat. Wenn man allerdings alle Fälle als einzelne IF Statements schreibt, geht der Computer alle durch, auch wenn bereits der zutreffende gefunden wurde. Heißt der Computer verschwendet ünnötige Rechenleistung.
 Alternative könnte man auch falls es sich anbietet ein Switch Statement verwenden, dies benötigt weniger Code.
 ```c#
